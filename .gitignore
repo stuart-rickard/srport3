@@ -1,5 +1,12 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+# SR development environment
+.env
+/*.env
+.gitignore
+.lh/
+git_ignored.js
+for-tests.js
+npm-debug.log
+.DS_Store
 # dependencies
 /node_modules
 /.pnp
