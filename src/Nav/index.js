@@ -1,7 +1,7 @@
-import React from "react";
-// import TypeWriterEffect from "react-typewriter-effect";
+import React, { useState } from "react";
+import "./Nav.css";
 
-const textArray = [
+const textArrayFirstLine = [
   "s",
   "t",
   "u",
@@ -15,41 +15,31 @@ const textArray = [
   "a",
   "r",
   "d",
-  "<br/>",
-  ".",
-  "p",
-  "o",
-  "r",
-  "t",
-  "f",
-  "o",
-  "l",
-  "i",
-  "o",
-  "<br/>",
-  ".",
 ];
-
-function updateText() {}
+const textArraySecondLine = [".", "p", "o", "r", "t", "f", "o", "l", "i", "o"];
 
 function Nav() {
+  const [typedTextFirstLine, setTypedTextFirstLine] = useState("ol");
+  const [typedTextSecondLine, setTypedTextSecondLine] = useState(".portfolio");
+  // const [typedTextFirstLine, setTypedTextFirstLine] = useState("hello world today <br /> tada");
+
+  //   setTypedTextFirstLine("new");
+
+  //    function typeText() {
+
+  //       textArrayFirstLine.forEach(letter => {
+  //            setTimeout(
+  //               {
+  //                 setTypedTextFirstLine("new")
+  //             }, 2000);
+  //       })
+
+  //   }
   return (
     <>
-      {/* <TypeWriterEffect
-        textStyle={{ fontFamily: "Red Hat Display" }}
-        startDelay={100}
-        cursorColor="black"
-        text="This is a single "
-        typeSpeed={100}
-        // scrollArea={myAppRef}
-      /> */}
-      <h1 className="typewriter">
-        stuartRickard
-        <br />
-        .portfolio
-        <br />
-        .contact
-      </h1>
+      <h1 className="typed-text-line-one">{typedTextFirstLine}</h1>
+      <h1 className="typed-text-line-two">{typedTextSecondLine}</h1>
+      <h1 className="typed-text-line-three">.resume</h1>
     </>
   );
 }
