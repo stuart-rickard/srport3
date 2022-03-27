@@ -1,44 +1,74 @@
 import React, { useState } from "react";
 import "./Nav.css";
 
-const textArrayFirstLine = [
-  "s",
-  "t",
-  "u",
-  "a",
-  "r",
-  "t",
-  "R",
-  "i",
-  "c",
-  "k",
-  "a",
-  "r",
-  "d",
-];
-const textArraySecondLine = [".", "p", "o", "r", "t", "f", "o", "l", "i", "o"];
-
 function Nav() {
-  const [typedTextFirstLine, setTypedTextFirstLine] = useState("ol");
-  const [typedTextSecondLine, setTypedTextSecondLine] = useState(".portfolio");
-  // const [typedTextFirstLine, setTypedTextFirstLine] = useState("hello world today <br /> tada");
+  console.log("running nav");
+  //   const textArrayFirstLine = [
+  //     "s",
+  //     "t",
+  //     "u",
+  //     "a",
+  //     "r",
+  //     "t",
+  //     "R",
+  //     "i",
+  //     "c",
+  //     "k",
+  //     "a",
+  //     "r",
+  //     "d",
+  //   ];
+  //   const textArraySecondLine = [
+  //     ".",
+  //     "p",
+  //     "o",
+  //     "r",
+  //     "t",
+  //     "f",
+  //     "o",
+  //     "l",
+  //     "i",
+  //     "o",
+  //   ];
 
-  //   setTypedTextFirstLine("new");
+  const [firstLine, setFirstLine] = useState("stuart");
 
-  //    function typeText() {
+  // textArrayFirstLine.forEach(letter => {
 
-  //       textArrayFirstLine.forEach(letter => {
-  //            setTimeout(
-  //               {
-  //                 setTypedTextFirstLine("new")
-  //             }, 2000);
-  //       })
+  //   setTimeout(() => {
+  //     if (firstLine == "stuart") {
+  //       setFirstLine("rickard");
+  //       console.log(" changed to rickard");
+  //     } else {
+  //       setFirstLine("stuart");
+  //       console.log("changed to stuart");
+  //     }
+  //   }, 10000);
+  let timeoutID;
 
-  //   }
+  let runbefore = false;
+
+  const functionTwo = function () {
+    if (runbefore == false) {
+      runbefore = true;
+      console.log("i will wait for you");
+    }
+    clearTimeout(timeoutID);
+  };
+
+  function functionOne() {
+    console.log("running fu 1");
+
+    timeoutID = setTimeout(functionTwo, 5000);
+    console.log(timeoutID);
+
+    return firstLine;
+  }
+
   return (
     <>
-      <h1 className="typed-text-line-one">{typedTextFirstLine}</h1>
-      <h1 className="typed-text-line-two">{typedTextSecondLine}</h1>
+      <h1 className="typed-text-line-one">{functionOne()}</h1>
+      {/* <h1 className="typed-text-line-two">{secondLine}</h1> */}
       <h1 className="typed-text-line-three">.resume</h1>
     </>
   );
