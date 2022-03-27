@@ -1,8 +1,8 @@
 import "./App.css";
-import Nav from "./Nav";
-import About from "./About";
-import Projects from "./Projects";
-import Contacts from "./Contacts";
+import Nav from "./Nav/Nav";
+import About from "./About/About";
+import Projects from "./Projects/Projects";
+import Contacts from "./Contacts/Contacts";
 import Resume from "./Resume/Resume";
 import Footer from "./Footer/Footer";
 import SomeComponent from "./SomeComponent";
