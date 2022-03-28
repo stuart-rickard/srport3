@@ -16,6 +16,7 @@ render(
         <Route path="Contact" element={<Contact />} />
         <Route path="Projects" element={<Projects />} />
         <Route path="Resume" element={<Resume />} />
+        <Route path="*" element={<About />} />
       </Route>
     </Routes>
   </BrowserRouter>,
