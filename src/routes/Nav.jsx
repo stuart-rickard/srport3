@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
@@ -31,7 +31,7 @@ function Nav() {
   //     "o",
   //   ];
 
-  const [firstLine, setFirstLine] = useState("stuartRickard");
+  // XXXXXXXXXXXXXXX const [firstLine, setFirstLine] = useState("stuartRickard");
 
   // textArrayFirstLine.forEach(letter => {
 
@@ -57,20 +57,20 @@ function Nav() {
   //   clearTimeout(timeoutID);
   // };
 
-  function functionOne() {
-    // console.log("running fu 1");
+  // function functionOne() {
+  //   // console.log("running fu 1");
 
-    // timeoutID = setTimeout(functionTwo, 5000);
-    // console.log(timeoutID);
+  //   // timeoutID = setTimeout(functionTwo, 5000);
+  //   // console.log(timeoutID);
 
-    return firstLine;
-  }
+  //   return firstLine;
+  // }
 
   return (
     <>
-      <h1 className="typed-text-line-one">{functionOne()}</h1>
+      <h1 className="typed-text-line-one">stuartRickard</h1>
       <h1 className="typed-text-line-two">.portfolio</h1>
-      <h1 className="typed-text-line-three">.resume</h1>
+      {/* <h1 className="typed-text-line-three">.resume</h1> */}
     </>
   );
 }
