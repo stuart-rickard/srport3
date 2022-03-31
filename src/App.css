@@ -1,0 +1,16 @@
+.App {
+  padding-top: 2em;
+}
+
+.App-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+div {
+  padding-left: 1em;
+}
