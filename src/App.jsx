@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import "./App.css";
 import Nav from "./routes/Nav";
+import Typing from "./routes/Typing";
 // import About from "./routes/About";
 // import Projects from "./routes/Projects";
 // import Contact from "./routes/Contact";
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Nav />
+        <Typing />
         {/* <SomeComponent /> */}
         <div>
           <Link to="/About">About</Link> | <Link to="/Contact">Contact</Link> |{" "}
