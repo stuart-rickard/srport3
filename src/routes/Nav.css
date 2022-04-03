@@ -10,3 +10,7 @@
   color: rgb(189, 105, 105);
   padding-left: 2em;
 }
+
+.typed-text-hidden {
+  visibility: hidden;
+}
