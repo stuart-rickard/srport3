@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Resume.css";
+import examplePdf from "../assets/example-pdf-document.pdf";
 
 function Resume() {
   return (
     <>
-      <h1>Under Construction!</h1>
-      {/* <img src="assets/construction.JPG" alt="Construction site with drill machine">
-  <br>
-  <img src="assets/adeline-place-time-lapse.gif" alt="Timelapse of construction of Adeline Place building in Emeryville, CA"> */}
+      <h1>Resume</h1>
+      <a href={examplePdf} download>
+        Click here to download example pdf.
+      </a>
     </>
   );
 }

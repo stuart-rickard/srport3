@@ -5,27 +5,24 @@ function About() {
     <>
       <h1>About</h1>
       <p>
-        I'm very interested generally in how humans can use technology to
-        improve their lives. Specifically to coding, I love user interfaces that
-        are highly intuitive for beginners and also provide a path for more
-        powerful use that unfolds as the user spends time working with the
-        interface. I find these interfaces very elegant, and I really appreciate
-        elegant coding also.
+        I'm interested in technology and how we can use technology to improve
+        our lives. This is a complex challenge that humans have always contended
+        with. I enjoy being part of a coding community that is working to
+        provide solutions to this challenge.
       </p>
-      <br />
       <p>
-        For thirty years I worked in the real estate development business; since
-        2003 as a real estate entrepreneur running my own business. Real estate
-        development has many aspects that are similar to software development:
-        collaboration, creativity, and a hopefully durable product, to name
-        three. Since I was a child, I've loved coding, and I'm very excited to
-        be able to work in coding now.
+        I appreciate and try to create: intuitive user interfaces, interesting
+        visual design, and easy-to-read code.
       </p>
-      <br />
       <p>
-        Education: BS Environmental Design, UC Berkeley; MBA, UC Berkeley.
-        Currently enrolled in UC Berkeley Extension Full Stack Coding Bootcamp.
+        I'm an experienced real estate developer and have owned my own business
+        since 2003. Collaboration and creativity are similarly valued in real
+        estate development as they are in software development.
       </p>
+      <p>Education: </p>
+      <p>BS Environmental Design, UC Berkeley</p>
+      <p>MBA, UC Berkeley</p>
+      <p>UC Berkeley Extension Full Stack Coding Bootcamp (April 2022)</p>
     </>
   );
 }
