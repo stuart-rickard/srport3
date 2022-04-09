@@ -1,78 +1,96 @@
-import { Outlet, Link } from "react-router-dom";
 import "./Nav.css";
 
-function Nav() {
-  console.log("running nav");
-  //   const textArrayFirstLine = [
-  //     "s",
-  //     "t",
-  //     "u",
-  //     "a",
-  //     "r",
-  //     "t",
-  //     "R",
-  //     "i",
-  //     "c",
-  //     "k",
-  //     "a",
-  //     "r",
-  //     "d",
-  //   ];
-  //   const textArraySecondLine = [
-  //     ".",
-  //     "p",
-  //     "o",
-  //     "r",
-  //     "t",
-  //     "f",
-  //     "o",
-  //     "l",
-  //     "i",
-  //     "o",
-  //   ];
+import React, { useState, useEffect } from "react";
+const firstLine = "stuartRickard";
+const secondLine = "coding";
+const thirdLine = "portfolio()";
 
-  // XXXXXXXXXXXXXXX const [firstLine, setFirstLine] = useState("stuartRickard");
+export default function Nav() {
+  console.log("running menu");
+  const [letterCount, setletterCount] = useState(0);
+  const [blink, setBlink] = useState(true);
+  const [secondLineVis, setSecondLineVis] = useState(false);
+  const [thirdLineVis, setThirdLineVis] = useState(false);
 
-  // textArrayFirstLine.forEach(letter => {
+  // typeWriter
+  useEffect(() => {
+    if (
+      letterCount >=
+      firstLine.length + secondLine.length + thirdLine.length + 11
+    ) {
+      console.log("first if");
+      return;
+    }
 
-  //   setTimeout(() => {
-  //     if (firstLine == "stuart") {
-  //       setFirstLine("rickard");
-  //       console.log(" changed to rickard");
-  //     } else {
-  //       setFirstLine("stuart");
-  //       console.log("changed to stuart");
-  //     }
-  //   }, 10000);
+    if (letterCount == firstLine.length && !secondLineVis) {
+      setSecondLineVis(true);
+      // return;
+    }
 
-  // let timeoutID;
+    if (letterCount == firstLine.length + secondLine.length && !thirdLineVis) {
+      setThirdLineVis(true);
+      // return;
+    }
 
-  // let runbefore = false;
+    const timeout = setTimeout(() => {
+      setletterCount((prev) => prev + 1);
+      console.log(letterCount);
+    }, parseInt(Math.random() * 80 + 50));
 
-  // const functionTwo = function () {
-  //   if (runbefore == false) {
-  //     runbefore = true;
-  //     console.log("i will wait for you");
-  //   }
-  //   clearTimeout(timeoutID);
-  // };
+    return () => clearTimeout(timeout);
+  }, [letterCount]);
 
-  // function functionOne() {
-  //   // console.log("running fu 1");
-
-  //   // timeoutID = setTimeout(functionTwo, 5000);
-  //   // console.log(timeoutID);
-
-  //   return firstLine;
-  // }
+  // blinker
+  useEffect(() => {
+    console.log("in useEffect");
+    console.log("letterCount is " + letterCount);
+    if (
+      letterCount >=
+      firstLine.length + secondLine.length + thirdLine.length + 4
+    ) {
+      return;
+    }
+    const timeout2 = setTimeout(() => {
+      setBlink((prev) => !prev);
+    }, 450);
+    return () => clearTimeout(timeout2);
+  }, [blink]);
 
   return (
     <>
-      <h1 className="typed-text-line-one">stuartRickard</h1>
-      <h1 className="typed-text-line-two">.portfolio</h1>
-      {/* <h1 className="typed-text-line-three">.resume</h1> */}
+      {/* first line */}
+      <h1 className="typed-text-line-one">{`${firstLine.substring(
+        0,
+        letterCount
+      )}${letterCount >= firstLine.length ? " " : blink ? "|" : " "}`}</h1>
+
+      {/* second line */}
+      <h1
+        className={!secondLineVis ? "typed-text-hidden" : "typed-text-line-two"}
+      >{`.${secondLine.substring(0, letterCount - firstLine.length)}${
+        letterCount >= firstLine.length + secondLine.length
+          ? " "
+          : blink
+          ? "|"
+          : " "
+      }`}</h1>
+
+      {/* third line */}
+      <h1
+        className={
+          !thirdLineVis ? "typed-text-hidden" : "typed-text-line-three"
+        }
+      >{`.${thirdLine.substring(
+        0,
+        letterCount - firstLine.length - secondLine.length
+      )}${
+        letterCount >=
+        firstLine.length + secondLine.length + thirdLine.length + 4
+          ? " "
+          : blink
+          ? "|"
+          : " "
+      }`}</h1>
     </>
   );
 }
-
-export default Nav;

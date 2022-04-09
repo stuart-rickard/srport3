@@ -4,3 +4,12 @@ p {
   color: white;
   width: 40em;
 }
+
+p {
+  padding-top: 1em;
+}
+
+.no-top-padding {
+  padding-top: 0em;
+  margin-bottom: 0rem;
+}

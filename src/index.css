@@ -1,7 +1,7 @@
 /* GLOBAL STYLES */
 * {
   margin: 0;
-  font-family: "Courier Prime", monospace;
+  font-family: "consolas", "Courier Prime", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #333;

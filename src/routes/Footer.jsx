@@ -4,10 +4,8 @@ import octo from "../assets/git-logo-lt.png";
 
 function Footer() {
   return (
-    <>
+    <div className="App-footer">
       <h1>
-        🦶
-        <span> </span>
         <span>
           <a href="https://github.com/stuart-rickard">
             <img src={octo}></img>
@@ -23,9 +21,8 @@ function Footer() {
             📧
           </a>
         </span>
-        <span> </span> 🦶
       </h1>
-    </>
+    </div>
   );
 }
 
