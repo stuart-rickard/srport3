@@ -9,7 +9,6 @@ function Projects() {
       <h1>Projects </h1>
       <Row>
         <ProjectCard />
-        <ProjectCard />
       </Row>
     </>
   );
