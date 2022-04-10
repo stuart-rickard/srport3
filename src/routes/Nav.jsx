@@ -1,6 +1,8 @@
 import "./Nav.css";
+import { Outlet, Link } from "react-router-dom";
 
 import React, { useState, useEffect } from "react";
+
 const firstLine = "stuartRickard";
 const secondLine = "coding";
 const thirdLine = "portfolio()";
@@ -11,6 +13,7 @@ export default function Nav() {
   const [blink, setBlink] = useState(true);
   const [secondLineVis, setSecondLineVis] = useState(false);
   const [thirdLineVis, setThirdLineVis] = useState(false);
+  const [linksVis, setLinksVis] = useState(false);
 
   // typeWriter
   useEffect(() => {
@@ -18,6 +21,7 @@ export default function Nav() {
       letterCount >=
       firstLine.length + secondLine.length + thirdLine.length + 11
     ) {
+      setLinksVis(true);
       console.log("first if");
       return;
     }
@@ -91,6 +95,11 @@ export default function Nav() {
           ? "|"
           : " "
       }`}</h1>
+      <div className={!linksVis ? "body-hidden" : "body-visible"}>
+        <Link to="/About">About</Link> | <Link to="/Contact">Contact</Link> |{" "}
+        <Link to="/Projects">Projects</Link> | <Link to="/Resume">Resume</Link>
+      </div>
+      <Outlet />
     </>
   );
 }

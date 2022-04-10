@@ -1,0 +1,18 @@
+form,
+label,
+button {
+  color: white;
+  display: block;
+}
+
+form {
+  padding-left: 3em;
+}
+
+input {
+  color: cyan;
+}
+
+textarea {
+  color: orange;
+}

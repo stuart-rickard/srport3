@@ -3,6 +3,7 @@
   padding-left: 1em;
   margin-bottom: 0rem;
 }
+
 .typed-text-line-two {
   color: rgb(255, 122, 20);
   padding-left: 2em;
@@ -17,4 +18,22 @@
 .typed-text-hidden {
   visibility: hidden;
   margin-bottom: 0rem;
+}
+
+a {
+  font-family: "Courier Prime", monospace;
+}
+
+.body-visible {
+  padding-left: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.body-hidden {
+  visibility: hidden;
+  padding-left: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-family: "Courier Prime", monospace;
 }

@@ -20,7 +20,6 @@ render(
       <Route path="/Projects" element={<Projects />} />
       <Route path="/Resume" element={<Resume />} />
       <Route path="*" element={<About />} />
-      {/* </Route> */}
     </Routes>
     <Footer />
   </BrowserRouter>,

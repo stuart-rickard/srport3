@@ -1,6 +1,6 @@
 h1,
 p {
-  padding-left: 1em;
+  padding-left: 3em;
   color: white;
   width: 40em;
 }
@@ -12,4 +12,8 @@ p {
 .no-top-padding {
   padding-top: 0em;
   margin-bottom: 0rem;
+}
+
+img {
+  padding-left: 3em;
 }

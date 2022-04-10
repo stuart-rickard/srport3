@@ -6,8 +6,11 @@ function Resume() {
   return (
     <>
       <h1>Resume</h1>
-      <a href={examplePdf} download>
-        Click here to download example pdf.
+      <p>
+        Profiencies: HTML, CSS, JavaScript, React, MongoDB, SQL, Git, and more.
+      </p>
+      <a className="anchor" href={examplePdf} download>
+        Please click HERE to download an example pdf.
       </a>
     </>
   );

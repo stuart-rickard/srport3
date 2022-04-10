@@ -13,7 +13,12 @@ function Footer() {
         </span>
         <span> </span>
         <span>
-          <a href="https://www.linkedin.com/in/stuart-rickard-594a044/">in</a>{" "}
+          <a
+            className="sans-serif"
+            href="https://www.linkedin.com/in/stuart-rickard-594a044/"
+          >
+            in
+          </a>{" "}
         </span>
         <span> </span>
         <span>

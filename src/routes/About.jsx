@@ -1,9 +1,11 @@
 import "./About.css";
+import photo from "../assets/SR-200.jpg";
 
 function About() {
   return (
     <>
       <h1>About</h1>
+      <img src={photo}></img>
       <p>
         I'm interested in technology and how we can use technology to improve
         people's lives. This is a complex challenge. I enjoy being part of a

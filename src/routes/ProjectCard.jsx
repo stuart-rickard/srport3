@@ -10,7 +10,7 @@ import {
 
 export default function ProjectCard() {
   return (
-    <Col md="12" sm="12" lg="6">
+    <Col md="8" sm="10" lg="5">
       <Card>
         <CardBody>
           <CardTitle tag="h5">Card title</CardTitle>

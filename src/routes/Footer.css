@@ -1,5 +1,8 @@
 a {
   text-decoration: none;
   color: white;
+}
+
+.sans-serif {
   font-family: sans-serif;
 }
