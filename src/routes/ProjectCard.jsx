@@ -10,6 +10,11 @@ import {
 
 import "./ProjectCard.css";
 import circlesImage from "../assets/circles.png";
+import mondRandomImage from "../assets/mond-art.png";
+import penguinPlannerImage from "../assets/penguin.png";
+import sunnyWeekendImage from "../assets/sunny-weekend.png";
+import runBuddyImage from "../assets/run-buddy.png";
+import horiseonImage from "../assets/horiseon.png";
 
 const projectCardDataArray = [
   {
@@ -19,6 +24,47 @@ const projectCardDataArray = [
     text: "Uses the CSS box model to rotate concentric circles within one another",
     gitLink: "https://github.com/stuart-rickard/sandbox/tree/main/circles",
     deployedLink: "https://stuart-rickard.github.io/sandbox/circles/",
+  },
+  {
+    title: "MondRandom",
+    imgSrc: mondRandomImage,
+    alt: "multi-colored graphic pattern with lines",
+    text: "Uses CSS grid and random number generator to create an abstract pattern",
+    gitLink: "https://github.com/stuart-rickard/mond-random",
+    deployedLink: "https://stuart-rickard.github.io/mond-random/art.html",
+  },
+  {
+    title: "Penguin Planner",
+    imgSrc: penguinPlannerImage,
+    alt: "screenshot showing event planner website",
+    text: "Full-stack app for organizing an event with friends",
+    gitLink: "https://github.com/stuart-rickard/gp-penguin",
+    deployedLink: "https://penguin-planner.herokuapp.com/",
+  },
+  {
+    title: "Sunny Weekend",
+    imgSrc: sunnyWeekendImage,
+    alt: "screenshot showing a weekend planner website",
+    text: "Uses Google Maps and OpenWeather API's to select a city by location and temperature",
+    gitLink: "https://github.com/deivrs60/sunny-weekend",
+    deployedLink: "https://deivrs60.github.io/sunny-weekend/",
+  },
+  {
+    title: "Run Buddy",
+    imgSrc: runBuddyImage,
+    alt: "screenshot showing a website for connecting trainers to clients",
+    text: "A two-page website created in response to a Bootcamp course challenge",
+    gitLink: "#",
+    deployedLink: "https://stuart-rickard.github.io/runbuddy2/",
+  },
+  {
+    title: "Horiseon",
+    imgSrc: horiseonImage,
+    alt: "screenshot showing a website for search engine optimization services",
+    text: "A website with refactored code created in response to a Bootcamp course challenge",
+    gitLink: "https://github.com/stuart-rickard/urban-octo-telegram",
+    deployedLink:
+      "https://stuart-rickard.github.io/urban-octo-telegram/Develop/",
   },
 ];
 
@@ -38,6 +84,7 @@ export default function ProjectCard() {
           />
           <CardBody>
             <CardText>{project.text}</CardText>
+            <CardLink>Link: </CardLink>
             <CardLink href={project.gitLink}>GitHub</CardLink>
             <CardLink href={project.deployedLink}>Deployed</CardLink>
           </CardBody>
