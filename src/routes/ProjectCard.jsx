@@ -70,26 +70,28 @@ const projectCardDataArray = [
 
 export default function ProjectCard() {
   return (
-    <Col md="8" sm="10" lg="5">
+    <>
       {projectCardDataArray.map((project, index) => (
-        <Card key={index}>
-          <CardBody>
-            <CardTitle tag="h5">{project.title}</CardTitle>
-          </CardBody>
-          <img
-            className="card-img"
-            alt={project.alt}
-            src={project.imgSrc}
-            width="100%"
-          />
-          <CardBody>
-            <CardText>{project.text}</CardText>
-            <CardLink>Link: </CardLink>
-            <CardLink href={project.gitLink}>GitHub</CardLink>
-            <CardLink href={project.deployedLink}>Deployed</CardLink>
-          </CardBody>
-        </Card>
+        <Col md="8" sm="10" lg="5">
+          <Card key={index}>
+            <CardBody>
+              <CardTitle tag="h5">{project.title}</CardTitle>
+            </CardBody>
+            <img
+              className="card-img"
+              alt={project.alt}
+              src={project.imgSrc}
+              width="100%"
+            />
+            <CardBody>
+              <CardText>{project.text}</CardText>
+              <CardLink>Link: </CardLink>
+              <CardLink href={project.gitLink}>GitHub</CardLink>
+              <CardLink href={project.deployedLink}>Deployed</CardLink>
+            </CardBody>
+          </Card>
+        </Col>
       ))}
-    </Col>
+    </>
   );
 }

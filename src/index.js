@@ -21,6 +21,7 @@ render(
       <Route path="/Resume" element={<Resume />} />
       <Route path="*" element={<About />} />
     </Routes>
+    <p>...</p>
     <Footer />
   </BrowserRouter>,
   document.getElementById("root")
