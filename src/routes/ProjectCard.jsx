@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 
 import "./ProjectCard.css";
+import harvestersImage from "../assets/happy-harvesters.jpg";
 import circlesImage from "../assets/circles.png";
 import mondRandomImage from "../assets/mond-art.png";
 import penguinPlannerImage from "../assets/penguin.png";
@@ -17,6 +18,14 @@ import runBuddyImage from "../assets/run-buddy.png";
 import horiseonImage from "../assets/horiseon.png";
 
 const projectCardDataArray = [
+  {
+    title: "Happy Harvester",
+    imgSrc: harvestersImage,
+    alt: "screenshot of apple farm sim game",
+    text: "Game that allows the player to make game money by growing apples and making apple products",
+    gitLink: "https://github.com/scottrohrig/apple-orchard-games",
+    deployedLink: "https://happy-harvesters.herokuapp.com/login",
+  },
   {
     title: "Cirles",
     imgSrc: circlesImage,
